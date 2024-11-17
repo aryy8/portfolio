@@ -82,6 +82,45 @@
             }
         }
     </style>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* Glowing Cursor */
+        .custom-cursor {
+            position: fixed;
+            width: 15px;
+            height: 15px;
+            background-color: rgb(65, 221, 206);
+            border-radius: 50%;
+            pointer-events: none;
+            /* Prevent interference with clicks */
+            z-index: 9999;
+            /* Ensure it's above all content */
+            box-shadow: 0 0 10px 2px #b2e7e4;
+            transform: translate(-50%, -50%);
+            animation: glow-animation 1s infinite;
+        }
+
+
+        /* Keyframes for glowing effect */
+        @keyframes glow-animation {
+
+            0%,
+            100% {
+                box-shadow: 0 0 10px 2px rgb(65, 221, 206);
+            }
+
+            50% {
+                box-shadow: 0 0 20px 4px rgb(65, 221, 206);
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -216,10 +255,23 @@
 
         </script>
 
+
     <footer style="color: white; text-align: center; padding: 20px; background-color: #222;">
         <p>© 2024 Aryan Rastogi | <a href="https://github.com/aryy8" target="_blank">GitHub</a> | <a
                 href="https://linkedin.com/in/aryy8" target="_blank">LinkedIn</a></p>
     </footer>
+    <script>
+        // Create the custom glowing cursor dynamically
+        const cursor = document.createElement('div');
+        cursor.classList.add('custom-cursor');
+        document.body.appendChild(cursor);
+
+        // Update cursor position on mouse movement
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = `${e.pageX}px`;
+            cursor.style.top = `${e.pageY}px`;
+        });
+    </script>
 </body>
 
 
