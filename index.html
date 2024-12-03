@@ -130,6 +130,19 @@
             transform: scale(1.1);
             transition: transform 0.3s ease-in-out;
         }
+
+        a i {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        a:hover i {
+            transform: scale(1.2);
+            /* Increases size on hover */
+            color: #41ddce;
+            /* Change the icon color if needed */
+            box-shadow: 0 0 10px 4px rgba(65, 221, 206, 0.7);
+            /* Glow effect */
+        }
     </style>
 </head>
 
@@ -193,7 +206,7 @@
 
                 <div class="col-md-6 text-center">
                     <img src="images/pfp2.jpeg" alt="Aryan Rastogi" class="img-fluid rounded shadow-lg"
-                        style="max-width: 70%; height: auto; border: 5px solid white;">
+                        style="max-width: 70%; height: auto; border: 5px solid rgb(65, 221, 206);">
                 </div>
                 <div class="row justify-content-center mt-4">
                     <div class="col-auto">
@@ -207,15 +220,9 @@
                             <i class="fab fa-github"></i>
                         </a>
                     </div>
+                    
                     <div class="col-auto">
-                        <a href="https://twitter.com/aryanrastogi8" target="_blank"
-                            style="color: white; font-size: 30px;">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </div>
-                    <div class="col-auto">
-                        <a href="https://www.instagram.com/aryanrastogi_" target="_blank"
-                            style="color: white; font-size: 30px;">
+                        <a href="https://www.instagram.com/aryanrastogi___" target="_blank" style="color: white; font-size: 30px;">
                             <i class="fab fa-instagram"></i>
                         </a>
                     </div>
